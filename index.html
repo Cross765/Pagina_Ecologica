@@ -1,10 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tecnología y Medio Ambiente 🌱</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="./estilos/styles.css">
 </head>
 <body>
 
@@ -31,43 +32,45 @@
     </div>
   </section>
 
+  <!-- ===== NUEVO ACORDEÓN ===== -->
   <section>
     <h2>Problemas Ambientales</h2>
-    <div class="card-container">
-      <div class="card">
-        <h3>Desechos electrónicos</h3>
-        <p>Los aparatos en desuso generan millones de toneladas de basura contaminante.</p>
-        <div class="extra-content">
+    <div class="accordion">
+      <div class="accordion-item">
+        <button class="accordion-header">Desechos electrónicos</button>
+        <div class="accordion-body">
+          <p>Los aparatos en desuso generan millones de toneladas de basura contaminante.</p>
           <p>Los desechos electrónicos contienen metales pesados como plomo y mercurio que contaminan el suelo y agua.</p>
           <img src="./recursos/Desechos_Tec.jpg" alt="Desechos electrónicos">
         </div>
       </div>
-      <div class="card">
-        <h3>Consumo innecesario</h3>
-        <p>Dejar dispositivos encendidos cuando no se usan gasta energía.</p>
-        <div class="extra-content">
+      <div class="accordion-item">
+        <button class="accordion-header">Consumo innecesario</button>
+        <div class="accordion-body">
+          <p>Dejar dispositivos encendidos cuando no se usan gasta energía.</p>
           <p>El consumo innecesario contribuye al gasto de energía global, elevando la huella de carbono.</p>
           <img src="imagen-consumo.jpg" alt="Consumo innecesario">
         </div>
       </div>
-      <div class="card">
-        <h3>Pilas desechables</h3>
-        <p>Las pilas liberan químicos dañinos al medio ambiente.</p>
-        <div class="extra-content">
+      <div class="accordion-item">
+        <button class="accordion-header">Pilas desechables</button>
+        <div class="accordion-body">
+          <p>Las pilas liberan químicos dañinos al medio ambiente.</p>
           <p>Las pilas tardan cientos de años en degradarse y liberan tóxicos peligrosos al entorno.</p>
           <img src="imagen-pilas.jpg" alt="Pilas desechables">
         </div>
       </div>
-      <div class="card">
-        <h3>Agotamiento de recursos</h3>
-        <p>La producción tecnológica depende de minerales y recursos finitos.</p>
-        <div class="extra-content">
+      <div class="accordion-item">
+        <button class="accordion-header">Agotamiento de recursos</button>
+        <div class="accordion-body">
+          <p>La producción tecnológica depende de minerales y recursos finitos.</p>
           <p>El crecimiento tecnológico sin control acelera la extracción de minerales y afecta los ecosistemas.</p>
           <img src="imagen-recursos.jpg" alt="Agotamiento de recursos">
         </div>
       </div>
     </div>
   </section>
+  <!-- =========================== -->
 
   <section class="fondo-verde">
     <h2>Soluciones Sostenibles</h2>
@@ -126,7 +129,7 @@
     </p>
   </footer>
 
-  <script src="./script.js"></script>
+  <script src="./javascript/script.js"></script>
   
 </body>
 </html>

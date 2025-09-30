@@ -1,0 +1,239 @@
+
+/* ===== Estilos Generales ===== */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f0f9f0;
+  color: #333;
+  scroll-behavior: smooth;
+}
+
+header {
+  background: linear-gradient(to right, #2ecc71, #27ae60);
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+header h1 {
+  font-size: 2.8em;
+  margin: 0;
+  animation: fadeInDown 1.5s;
+}
+
+header p {
+  font-size: 1.3em;
+  margin-top: 15px;
+  animation: fadeInUp 2s;
+}
+
+section {
+  padding: 60px 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #2c3e50;
+  position: relative;
+}
+
+h2::after {
+  content: "";
+  width: 60px;
+  height: 4px;
+  background: #2ecc71;
+  display: block;
+  margin: 10px auto;
+  border-radius: 2px;
+}
+
+/* ===== Tarjetas normales ===== */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.card h3 {
+  margin-top: 0;
+  color: #27ae60;
+}
+
+.card p {
+  font-size: 0.95em;
+  line-height: 1.6;
+}
+
+.fondo-verde {
+  background: #e9f7ef;
+}
+
+/* ===== Estadísticas ===== */
+.stats {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+  text-align: center;
+}
+
+.stat {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  width: 220px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.stat h3 {
+  font-size: 2em;
+  color: #27ae60;
+}
+
+/* ===== Acordeón ===== */
+.accordion {
+  max-width: 900px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.accordion-item {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.accordion-header {
+  width: 100%;
+  text-align: left;
+  padding: 18px 20px;
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #27ae60;
+  border: none;
+  background: #f9f9f9;
+  cursor: pointer;
+  outline: none;
+  transition: background 0.3s ease;
+}
+
+.accordion-header:hover {
+  background: #eafaf0;
+}
+
+.accordion-body {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 20px;
+  line-height: 1.6;
+  transition: max-height 0.4s ease, padding 0.3s ease;
+  opacity: 0;
+}
+
+.accordion-body img {
+  width: 100%;
+  margin-top: 15px;
+  border-radius: 10px;
+}
+
+.accordion-item.active .accordion-body {
+  max-height: 600px;
+  padding: 15px 20px;
+  opacity: 1;
+}
+
+/* ===== Carrusel ===== */
+.carrusel {
+  text-align: center;
+}
+.slider {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 15px;
+  padding: 20px 0;
+}
+.slider div {
+  flex: none;
+  width: 300px;
+  scroll-snap-align: center;
+}
+.slider img {
+  width: 100%;
+  border-radius: 15px;
+}
+
+/* ===== Consejos ===== */
+.checklist {
+  list-style: none;
+  padding: 0;
+  max-width: 600px;
+  margin: auto;
+}
+.checklist li {
+  background: white;
+  margin: 10px 0;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+.checklist li::before {
+  content: "✅ ";
+}
+
+/* ===== Frases ===== */
+.frase {
+  font-size: 1.4em;
+  font-style: italic;
+  text-align: center;
+  padding: 40px;
+  background: linear-gradient(to right, #27ae60, #2ecc71);
+  color: white;
+  border-radius: 10px;
+}
+
+/* ===== Footer ===== */
+footer {
+  background: #27ae60;
+  color: white;
+  text-align: center;
+  padding: 30px;
+}
+footer a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Animaciones */
+@keyframes fadeInDown {
+  from {opacity: 0; transform: translateY(-20px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+@keyframes fadeInUp {
+  from {opacity: 0; transform: translateY(20px);}
+  to {opacity: 1; transform: translateY(0);}
+}
