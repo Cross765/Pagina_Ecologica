@@ -122,6 +122,10 @@ section {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
+section:first-of-type {
+  margin-top: 30px;
+}
+
 h2 {
   text-align: center;
   margin-bottom: 30px;
