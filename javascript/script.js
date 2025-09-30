@@ -1,4 +1,3 @@
-// Asegurarse de que el DOM esté cargado
 document.addEventListener('DOMContentLoaded', () => {
   const accordionItems = document.querySelectorAll(".accordion-item");
 
@@ -6,7 +5,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const header = item.querySelector(".accordion-header");
 
     header.addEventListener("click", () => {
+
       // Cierra los demás items
+
       accordionItems.forEach(i => {
         if (i !== item) {
           i.classList.remove("active");
@@ -14,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
 
       // Alterna el actual
+      
       item.classList.toggle("active");
     });
   });
