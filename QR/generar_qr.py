@@ -12,6 +12,7 @@ def generar_qr(url: str, archivo_salida: str = "qr.png", escala: int = 10):
         error_correction=qrcode.constants.ERROR_CORRECT_M,
         box_size=escala,
         border=4,
+        
     )
     qr.add_data(url)
     qr.make(fit=True)
