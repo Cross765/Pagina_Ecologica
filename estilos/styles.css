@@ -6,96 +6,13 @@ body {
   background: #f0f9f0;
   color: #333;
   scroll-behavior: smooth;
-  position: relative;
-}
-
-/* ===== Imágenes de fondo con scroll ===== */
-.background-section {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  z-index: -1;
-  opacity: 0;
-  transition: opacity 3s cubic-bezier(0.4, 0, 0.2, 1);
-  image-rendering: high-quality;
-  image-rendering: -webkit-optimize-contrast;
-  image-rendering: crisp-edges;
-  will-change: opacity;
-}
-
-.background-section.active {
-  opacity: 1;
-}
-
-/* Crossfade suave - las imágenes se superponen durante la transición */
-.background-section.fade-in {
-  opacity: 1;
-  z-index: -1;
-}
-
-.background-section.fade-out {
-  opacity: 0;
-  z-index: -2;
-}
-
-/* Imágenes específicas */
-.bg-ndlr-plantas {
-  background-image: url('../recursos/ndlr_plantas.JPG');
-}
-
-.bg-ndlr-plaza {
-  background-image: url('../recursos/ndlr_plaza.JPG');
-}
-
-.bg-ndlr {
-  background-image: url('../recursos/ndlr.PNG');
-}
-
-.bg-pedernales-all {
-  background-image: url('../recursos/pedernales_all.JPG');
-}
-
-.bg-pedernales {
-  background-image: url('../recursos/pedernales.JPG');
-}
-
-/* Overlay para mejorar legibilidad del texto */
-.background-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.3);
-  z-index: -1;
 }
 
 header {
-  background: linear-gradient(to right, rgba(46, 204, 113, 0.9), rgba(39, 174, 96, 0.9));
+  background: linear-gradient(to right, #2ecc71, #27ae60);
   color: white;
   text-align: center;
   padding: 80px 20px;
-  position: relative;
-  z-index: 1;
-}
-
-.logo {
-  width: 120px;
-  height: auto;
-  vertical-align: middle;
-  margin-right: 8px;
-
-  background-color: rgba(255, 255, 255, 0.377);
-
-  box-shadow: 1px 5px 5px 1px rgba(0, 0, 0, 0.39);
-
-  border-radius: 18%;
 }
 
 header h1 {
@@ -114,16 +31,6 @@ section {
   padding: 60px 20px;
   max-width: 1100px;
   margin: auto;
-  position: relative;
-  z-index: 1;
-  background: rgba(255, 255, 255, 0.7);
-  border-radius: 5px;
-  margin-bottom: 20px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-}
-
-section:first-of-type {
-  margin-top: 30px;
 }
 
 h2 {
@@ -154,14 +61,14 @@ h2::after {
   background: white;
   padding: 20px;
   border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   transition: transform 0.3s, box-shadow 0.3s;
   cursor: pointer;
 }
 
 .card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
 
 .card h3 {
@@ -192,7 +99,7 @@ h2::after {
   padding: 30px;
   border-radius: 15px;
   width: 220px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 .stat h3 {
@@ -212,7 +119,7 @@ h2::after {
 .accordion-item {
   background: white;
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   overflow: hidden;
   transition: all 0.3s ease;
 }
@@ -274,7 +181,6 @@ h2::after {
 .carrusel {
   text-align: center;
 }
-
 .slider {
   display: flex;
   overflow-x: auto;
@@ -282,13 +188,11 @@ h2::after {
   gap: 15px;
   padding: 20px 0;
 }
-
 .slider div {
   flex: none;
   width: 300px;
   scroll-snap-align: center;
 }
-
 .slider img {
   width: 100%;
   border-radius: 15px;
@@ -301,15 +205,13 @@ h2::after {
   max-width: 600px;
   margin: auto;
 }
-
 .checklist li {
   background: white;
   margin: 10px 0;
   padding: 15px;
   border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
-
 .checklist li::before {
   content: "✅ ";
 }
@@ -327,79 +229,24 @@ h2::after {
 
 /* ===== Footer ===== */
 footer {
-  background: rgba(39, 174, 96, 0.9);
+  background: #27ae60;
   color: white;
   text-align: center;
   padding: 30px;
-  position: relative;
-  z-index: 1;
 }
-
-footer p:first-child {
-  margin-bottom: 30px;
-}
-
 footer a {
   color: white;
   margin: 0 10px;
   text-decoration: none;
   font-weight: bold;
-  transition: all 0.3s ease;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-}
-
-footer a:hover {
-  color: rgba(168, 230, 207, 0.7);
-  transform: translateY(-2px);
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-footer a svg {
-  transition: all 0.3s ease;
-  flex-shrink: 0;
-}
-
-footer a:hover svg {
-  transform: scale(1.1);
-  opacity: 0.8;
-}
-
-/* Colores específicos para cada red social */
-footer a.facebook:hover {
-  color: rgba(24, 119, 242, 0.8);
-}
-
-footer a.instagram:hover {
-  color: #ff6b6b;
-}
-
-footer a.email:hover {
-  color: rgba(234, 67, 53, 0.8);
 }
 
 /* Animaciones */
 @keyframes fadeInDown {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from {opacity: 0; transform: translateY(-20px);}
+  to {opacity: 1; transform: translateY(0);}
 }
-
 @keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from {opacity: 0; transform: translateY(20px);}
+  to {opacity: 1; transform: translateY(0);}
 }
