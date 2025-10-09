@@ -9,6 +9,27 @@ body {
   position: relative;
 }
 
+.instituto {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+
+.logo-instituto {
+  width: 120px; /* puedes ajustar el tamaño */
+  margin-bottom: 0.5rem;
+}
+
+.carrera {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1a4d2e; /* tono verde sobrio */
+  text-align: center;
+}
+
+
 /* ===== Imágenes de fondo con scroll ===== */
 .background-section {
   position: fixed;
